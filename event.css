@@ -1,0 +1,227 @@
+@import url(https://db.onlinewebfonts.com/c/b89af63f1d0fa3bbb52eb95ab3fcc2fa?family=Monstro); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-family: Monstro;
+}
+:root{
+    --primary: #fd7c37;
+    --secondary:#171717;
+    --tertiary:#f0e5dc;
+}
+.card{
+    display:block;
+    line-height: 40px;
+    background: var(--secondary);
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  
+  .card:before,
+  .card:after{
+    position: absolute;
+    content: "";
+    transition: all .25s;
+  }
+  
+  .card:before{
+    border-bottom: 3px solid var(--primary);
+    border-left: 3px solid var(--primary);
+    width: 10%;
+    height: 33%;
+    left: -10px;
+    bottom: -10px;
+  }
+  
+  .card:after{
+    border-top: 3px solid var(--primary);
+    border-right: 3px solid var(--primary);
+    width: 10%;
+    height: 33%;
+    top: -10px;
+    right: -10px;
+  }
+  
+  .card:hover:before{
+    width: 105%;
+    height: 105%;
+  }
+  
+  .card:hover:after{
+    width: 105%;
+    height: 105%;
+  }
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #171717; */
+    overflow: hidden;
+}
+.Upcoming-events{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color:var(--secondary) ; */
+    /* background-size: 200% 200%; */
+}
+.Upcoming-events p{
+    width: 75%;
+    text-align: center;
+    color:var(--tertiary);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.125;
+}
+.Upcoming-events h1{
+    margin-bottom: 10%;
+    color: var(--primary);
+    font-size: 80px;
+    font-weight: 400;
+}
+.cards{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height:100vh;
+    will-change: transform;
+}
+
+.card{
+    position: absolute;
+    width: 350px;
+    height: 550px;
+    top: 50%;
+    left: 60%;
+    transform-origin: center center;
+    margin-left: -250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    will-change: transform;
+}
+
+.card-img{
+    flex: 1;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.card-content{
+    width: 100%;
+    height: 60px;
+    font-size: 50px;
+}
+/* .card-content p{
+    text-align: left;
+    color: var(--tertiary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.15;
+} */
+
+.event-counter{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    
+    
+}
+.counter-title, .count{
+    position: relative;
+    color: var(--primary);
+    width: 1200px;
+    height: 150px;
+    clip-path: polygon( 1 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+.count{
+    top: -10px;
+}
+.count-container{
+    position: relative;
+    transform: translateY(150px);
+    will-change: transform;
+}
+.event-counter h1{
+    width:100%;
+    position: relative;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 150px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    will-change: transform;
+}
+.empty{
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .Upcoming-events {
+        padding: 20px;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+        top: 50%;
+    }
+
+    .Upcoming-events p {
+        font-size: 28px;
+    }
+
+    .Upcoming-events h1 {
+        font-size: 40px;
+    }
+
+    .event-counter h1 {
+        font-size: 80px;
+    }
+
+    .counter-title, .count {
+        width: 500px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 95vw;
+        height: 500px;
+    }
+
+    .Upcoming-events p {
+        font-size: 20px;
+    }
+
+    .Upcoming-events h1 {
+        font-size: 30px;
+    }
+
+    .event-counter h1 {
+        font-size: 50px;
+    }
+
+    .counter-title, .count {
+        width: 250px;
+        height: 50px;
+    }
+}
